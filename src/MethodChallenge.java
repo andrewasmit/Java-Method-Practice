@@ -27,17 +27,19 @@ public class MethodChallenge {
         //greater than or equal to 100 but less than 500 => 3
         //else =>4
 
+        int position = 0;
         if (score >= 1000){
-            return 1;
+            position =  1;
         } else if
         (score >= 500){
-            return 2;
+            position =  2;
         } else if
         (score >= 100){
-            return 3;
-        }
+            position =  3;
+        } else
+            position = 4;
 
-        return 4;
+        return position;
     }
 
     public static void displayHighScorePosition(String name, int position){
