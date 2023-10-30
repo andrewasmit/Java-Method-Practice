@@ -4,11 +4,17 @@ public class DigitSum {
         System.out.println(sumDigits(258));
         System.out.println(sumDigits(2));
         System.out.println(sumDigits(27));
+        System.out.println(sumDigits(-75));
     }
 
     ;
 
     public static int sumDigits(int num){
+        // Ensure the input is positive
+        if (num < 0){
+            return -1;
+        }
+
         // Init a counter variable that += n as we go through the loop
         int counter = 0;
 
@@ -18,7 +24,7 @@ public class DigitSum {
             int lastDigit = num % 10;
             counter += lastDigit;
 
-            // USe num / 10 to drop that number while looping through
+            // Use num / 10 to drop that number while looping through
             num = num / 10;;
         }
 
