@@ -46,16 +46,14 @@ public class BankAccount {
         this.phoneNumber = phoneNumber;
     }
 
-    private double withdraw(double amount){
+    private void withdraw(double amount){
         if(balance - amount >= 0){
             balance -= amount;
         }
-        return balance;
     };
 
-    private double deposit(double amount){
+    private void deposit(double amount){
         balance += amount;
-        return balance;
     }
 }
 
