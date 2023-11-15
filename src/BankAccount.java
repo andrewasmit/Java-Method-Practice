@@ -46,14 +46,18 @@ public class BankAccount {
         this.phoneNumber = phoneNumber;
     }
 
-    private void withdraw(double amount){
+    public void withdraw(double amount){
         if(balance - amount >= 0){
             balance -= amount;
+            System.out.println("Your account balance is now " + balance);
+        } else {
+            System.out.println("Insufficient funds. You only have a balance of " + balance);
         }
     };
 
-    private void deposit(double amount){
+    public void deposit(double amount){
         balance += amount;
+        System.out.println("Your account balance is now " + balance);
     }
 }
 
